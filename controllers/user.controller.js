@@ -24,7 +24,8 @@ const refreshAccessToken= asyncHandler(async(req,res)=>{
         const options = {
             httpOnly: true,
 
-            secure: false,    
+             secure: true,          // ✅ MUST be true on HTTPS
+             sameSite: "none"
         };
 
         
@@ -110,7 +111,8 @@ const loginUser= asyncHandler(async(req,res)=>{
     const {accessToken,refreshToken}= await generateTokens(existedUser);
         const options = {
         httpOnly: true,
-        secure: false,     //   /  Set to true if i will be usng HTTPS
+         secure: true,          // ✅ MUST be true on HTTPS
+           sameSite: "none"  //   /  Set to true if i will be usng HTTPS
 
         }
 
