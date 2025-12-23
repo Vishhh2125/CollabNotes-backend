@@ -9,7 +9,7 @@ app.use(morgan("dev"));
 app.use(cors({
   origin: [
     'http://localhost:5173',
-     'https://694ab74cb304bb03d6ec295f--sprightly-gelato-6bd483.netlify.app' 
+    'https://sprightly-gelato-6bd483.netlify.app'
   ],
   credentials: true
 }));
